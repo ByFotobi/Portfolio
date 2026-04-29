@@ -20,10 +20,12 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 64px;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background:
     linear-gradient(180deg, #ffffff 0%, var(--bg) 38%, #ffffff 100%);
   color: var(--text);
@@ -53,80 +55,78 @@ img {
 
 .site-header {
   position: sticky;
-  top: 16px;
+  top: 0;
   z-index: 20;
   display: flex;
-  width: min(1120px, calc(100% - 32px));
-  min-height: 58px;
+  width: 100%;
+  min-height: 48px;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
-  padding: 10px 12px;
-  margin: 16px auto 0;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.58);
-  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(26px) saturate(180%);
+  gap: 24px;
+  padding: 0 max(18px, calc((100vw - 1024px) / 2));
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(245, 245, 247, 0.78);
+  backdrop-filter: saturate(180%) blur(20px);
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding-left: 4px;
+  gap: 8px;
   color: var(--ink);
-  font-size: 0.96rem;
+  font-size: 0.84rem;
   font-weight: 700;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .brand-mark {
   display: grid;
-  width: 38px;
-  height: 38px;
+  width: 24px;
+  height: 24px;
   place-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(29, 29, 31, 0.16);
   border-radius: 50%;
-  background: var(--ink);
-  color: #fff;
-  font-size: 0.78rem;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink);
+  font-size: 0.62rem;
   font-weight: 800;
 }
 
 .nav {
   display: flex;
   align-items: center;
-  gap: 4px;
+  justify-content: flex-end;
+  gap: clamp(14px, 3vw, 34px);
+  min-width: 0;
 }
 
 .nav a {
-  padding: 9px 12px;
-  border-radius: 999px;
-  color: rgba(29, 29, 31, 0.72);
-  font-size: 0.92rem;
-  font-weight: 650;
+  padding: 16px 0;
+  color: rgba(29, 29, 31, 0.78);
+  font-size: 0.8rem;
+  font-weight: 500;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .nav a:hover {
-  background: rgba(255, 255, 255, 0.76);
   color: var(--ink);
 }
 
 .hero {
   position: relative;
   display: grid;
-  min-height: calc(100vh - 90px);
+  min-height: calc(100svh - 48px);
   grid-template-columns: minmax(0, 1fr);
   align-items: end;
-  gap: 28px;
-  padding: 24px clamp(18px, 4vw, 48px) clamp(36px, 6vw, 76px);
+  padding: clamp(14px, 2.5vw, 28px) clamp(14px, 4vw, 48px)
+    clamp(36px, 6vw, 76px);
 }
 
 .hero-media {
   position: relative;
-  min-height: clamp(430px, 62vw, 720px);
+  min-height: clamp(520px, calc(100svh - 112px), 760px);
   overflow: hidden;
   border-radius: clamp(18px, 3vw, 34px);
   background: #101114;
@@ -182,10 +182,10 @@ img {
 
 .hero-copy {
   position: absolute;
-  bottom: clamp(34px, 7vw, 92px);
-  left: clamp(28px, 7vw, 96px);
+  bottom: clamp(54px, 8vw, 104px);
+  left: clamp(32px, 8vw, 112px);
   z-index: 3;
-  width: min(780px, calc(100% - 56px));
+  width: min(760px, calc(100% - 64px));
   color: #fff;
 }
 
@@ -210,19 +210,19 @@ p {
 }
 
 h1 {
-  max-width: 900px;
+  max-width: 820px;
   margin: 0;
-  font-size: clamp(3.2rem, 8vw, 8.4rem);
+  font-size: clamp(3.1rem, 7.2vw, 7.6rem);
   font-weight: 780;
   letter-spacing: 0;
-  line-height: 0.88;
+  line-height: 0.9;
 }
 
 h2 {
   max-width: 920px;
   margin: 0;
   color: var(--ink);
-  font-size: clamp(2.3rem, 5.6vw, 6.4rem);
+  font-size: clamp(2.25rem, 5vw, 5.8rem);
   font-weight: 760;
   letter-spacing: 0;
   line-height: 0.96;
@@ -236,10 +236,10 @@ h3 {
 }
 
 .intro {
-  max-width: 680px;
+  max-width: 640px;
   margin: 24px 0 0;
   color: rgba(255, 255, 255, 0.78);
-  font-size: clamp(1.05rem, 1.7vw, 1.34rem);
+  font-size: clamp(1rem, 1.45vw, 1.24rem);
 }
 
 .actions {
@@ -273,7 +273,7 @@ h3 {
 }
 
 .section {
-  padding: clamp(70px, 10vw, 132px) clamp(18px, 5vw, 72px);
+  padding: clamp(64px, 9vw, 124px) clamp(18px, 5vw, 72px);
 }
 
 .section-heading {
@@ -514,6 +514,8 @@ h3 {
   background: rgba(255, 255, 255, 0.08);
   color: #fff;
   font-weight: 760;
+  overflow-wrap: anywhere;
+  text-align: center;
   text-decoration: none;
 }
 
@@ -536,12 +538,13 @@ h3 {
   }
 
   .hero-media {
-    min-height: 680px;
+    min-height: 640px;
   }
 
   .hero-copy {
-    bottom: 34px;
-    left: 28px;
+    bottom: 44px;
+    left: 32px;
+    width: calc(100% - 64px);
   }
 
   .feature-film,
@@ -559,49 +562,49 @@ h3 {
 
 @media (max-width: 640px) {
   .site-header {
-    top: 10px;
-    width: min(100% - 20px, 1120px);
-    align-items: flex-start;
-    flex-direction: column;
-    border-radius: 24px;
+    min-height: 44px;
+    gap: 12px;
+    padding: 0 14px;
   }
 
   .nav {
-    width: 100%;
-    justify-content: space-between;
+    flex: 1;
+    gap: clamp(11px, 4vw, 18px);
   }
 
   .nav a {
-    padding-right: 8px;
-    padding-left: 8px;
-    font-size: 0.86rem;
+    padding: 14px 0;
+    font-size: 0.75rem;
   }
 
   .hero {
-    padding-right: 10px;
-    padding-left: 10px;
+    padding: 10px 10px 42px;
   }
 
   .hero-media {
-    min-height: 720px;
-    border-radius: 26px;
+    min-height: max(720px, calc(100svh - 64px));
+    border-radius: 24px;
   }
 
   .hero-copy {
-    width: calc(100% - 40px);
+    bottom: 28px;
     left: 20px;
+    width: calc(100% - 40px);
   }
 
   h1 {
-    font-size: clamp(3.05rem, 17vw, 5.2rem);
+    font-size: clamp(2.45rem, 11.8vw, 4rem);
+    line-height: 0.96;
   }
 
   h2 {
-    font-size: clamp(2.3rem, 12vw, 4rem);
+    font-size: clamp(2.05rem, 10vw, 3.5rem);
+    line-height: 1;
   }
 
   .intro {
-    font-size: 1rem;
+    margin-top: 18px;
+    font-size: 0.98rem;
   }
 
   .actions,
@@ -609,6 +612,11 @@ h3 {
   .footer {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .actions {
+    gap: 10px;
+    margin-top: 22px;
   }
 
   .button,
@@ -620,10 +628,66 @@ h3 {
     top: 18px;
     right: 18px;
     bottom: auto;
+    min-width: 136px;
+    padding: 10px 12px;
+    font-size: 0.82rem;
   }
 
   .section {
     padding-right: 18px;
     padding-left: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand span:last-child {
+    display: none;
+  }
+
+  .site-header {
+    gap: 10px;
+  }
+
+  .nav {
+    justify-content: space-between;
+  }
+
+  .hero-media {
+    min-height: max(690px, calc(100svh - 58px));
+  }
+
+  h1 {
+    font-size: clamp(2.24rem, 11vw, 3rem);
+  }
+
+  .intro {
+    margin-top: 16px;
+    font-size: 0.94rem;
+  }
+
+  .button {
+    min-height: 43px;
+    padding: 10px 14px;
+  }
+
+  .film-copy,
+  .about-text {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .meta-list div {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .meta-list dd {
+    text-align: left;
+  }
+
+  .contact-inner {
+    padding: 28px 22px;
+    border-radius: 26px;
   }
 }
