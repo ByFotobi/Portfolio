@@ -188,6 +188,11 @@ img {
   object-fit: cover;
 }
 
+.hero-media video {
+  height: 118%;
+  transform: translateY(-8%);
+}
+
 .hero-glass,
 .glass-panel {
   border: 1px solid rgba(255, 255, 255, 0.56);
@@ -319,6 +324,74 @@ h3 {
 
 .section-heading.compact {
   margin-bottom: 24px;
+}
+
+.signature-section {
+  padding-top: clamp(36px, 6vw, 86px);
+}
+
+.signature-grid {
+  display: grid;
+  width: min(1120px, 100%);
+  grid-template-columns: minmax(0, 1.12fr) minmax(260px, 0.8fr);
+  gap: 18px;
+  margin: 0 auto;
+}
+
+.signature-card {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--panel-strong);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.07);
+}
+
+.signature-card-large {
+  grid-row: span 2;
+}
+
+.signature-media {
+  display: block;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.signature-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.signature-card-large .signature-media img {
+  aspect-ratio: 4 / 3;
+}
+
+.signature-card:hover .signature-media img {
+  transform: scale(1.035);
+}
+
+.signature-copy {
+  padding: clamp(22px, 4vw, 34px);
+}
+
+.signature-copy p {
+  margin: 0 0 22px;
+  color: var(--muted);
+}
+
+.signature-copy a {
+  color: var(--blue);
+  font-weight: 760;
+  text-decoration: none;
+}
+
+.signature-copy a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .feature-film {
@@ -567,6 +640,7 @@ h3 {
 }
 
 @media (max-width: 920px) {
+  .signature-grid,
   .feature-film,
   .work-grid,
   .services,
