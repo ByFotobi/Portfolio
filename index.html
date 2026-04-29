@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfolio von Max Mustermann: Webentwicklung, Projekte und Kontakt."
+    />
+    <title>Max Mustermann | Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#start" aria-label="Zur Startseite">
+        <span class="brand-mark">MM</span>
+        <span>Max Mustermann</span>
+      </a>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="#projekte">Projekte</a>
+        <a href="#ueber-mich">Über mich</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </header>
+
+    <main id="start">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Portfolio</p>
+          <h1>Ich baue klare digitale Lösungen für echte Aufgaben.</h1>
+          <p class="intro">
+            Hi, ich bin Max. Ich entwickle Websites, kleine Tools und saubere
+            Interfaces mit Fokus auf Verständlichkeit, Geschwindigkeit und
+            Alltagstauglichkeit.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="#projekte">Projekte ansehen</a>
+            <a class="button secondary" href="mailto:max@example.com">Kontakt</a>
+          </div>
+        </div>
+
+        <figure class="profile">
+          <img src="assets/profile-card.svg" alt="Abstrakte Portfolio-Grafik" />
+          <figcaption>
+            Verfügbar für Freelance-Projekte, Beratung und Prototyping.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="section" id="projekte">
+        <div class="section-heading">
+          <p class="eyebrow">Auswahl</p>
+          <h2>Projekte</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <span class="project-tag">Web App</span>
+            <h3>Dashboard für lokale Betriebe</h3>
+            <p>
+              Ein schlankes Reporting-Tool mit Kennzahlen, Filtern und klarer
+              Darstellung für schnelle Entscheidungen.
+            </p>
+            <a href="https://github.com/" target="_blank" rel="noreferrer">
+              GitHub ansehen
+            </a>
+          </article>
+          <article class="project-card">
+            <span class="project-tag">Website</span>
+            <h3>Portfolio für Kreative</h3>
+            <p>
+              Eine schnelle OnePage-Seite mit Projektgalerie, Kontaktbereich und
+              sauberer mobiler Darstellung.
+            </p>
+            <a href="https://github.com/" target="_blank" rel="noreferrer">
+              GitHub ansehen
+            </a>
+          </article>
+          <article class="project-card">
+            <span class="project-tag">Tool</span>
+            <h3>Automatisierter CSV-Importer</h3>
+            <p>
+              Ein kleines Skript, das Daten prüft, normalisiert und für weitere
+              Auswertungen vorbereitet.
+            </p>
+            <a href="https://github.com/" target="_blank" rel="noreferrer">
+              GitHub ansehen
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split" id="ueber-mich">
+        <div>
+          <p class="eyebrow">Profil</p>
+          <h2>Über mich</h2>
+        </div>
+        <div class="about-text">
+          <p>
+            Ich arbeite gern an Projekten, bei denen Technik nicht im Weg steht,
+            sondern Dinge einfacher macht. Mein Schwerpunkt liegt auf Frontend,
+            Struktur, Automatisierung und verständlicher Kommunikation.
+          </p>
+          <ul class="skills" aria-label="Fähigkeiten">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>GitHub Pages</li>
+            <li>Responsive Design</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section contact" id="kontakt">
+        <p class="eyebrow">Kontakt</p>
+        <h2>Lass uns über dein nächstes Projekt sprechen.</h2>
+        <div class="contact-links">
+          <a href="mailto:max@example.com">max@example.com</a>
+          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Max Mustermann</span>
+      <a href="#start">Nach oben</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
