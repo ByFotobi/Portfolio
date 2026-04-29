@@ -5,126 +5,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Portfolio von Max Mustermann: Webentwicklung, Projekte und Kontakt."
+      content="ByFotobi ist das Portfolio eines Videografen für emotionale, klare und hochwertige Filmproduktionen."
     />
-    <title>Max Mustermann | Portfolio</title>
+    <title>ByFotobi | Videograf</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="#start" aria-label="Zur Startseite">
-        <span class="brand-mark">MM</span>
-        <span>Max Mustermann</span>
+        <span class="brand-mark">BF</span>
+        <span>ByFotobi</span>
       </a>
       <nav class="nav" aria-label="Hauptnavigation">
-        <a href="#projekte">Projekte</a>
-        <a href="#ueber-mich">Über mich</a>
+        <a href="#showreel">Showreel</a>
+        <a href="#arbeiten">Arbeiten</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
     </header>
 
     <main id="start">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Portfolio</p>
-          <h1>Ich baue klare digitale Lösungen für echte Aufgaben.</h1>
-          <p class="intro">
-            Hi, ich bin Max. Ich entwickle Websites, kleine Tools und saubere
-            Interfaces mit Fokus auf Verständlichkeit, Geschwindigkeit und
-            Alltagstauglichkeit.
-          </p>
-          <div class="actions">
-            <a class="button primary" href="#projekte">Projekte ansehen</a>
-            <a class="button secondary" href="mailto:max@example.com">Kontakt</a>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media">
+          <img src="assets/showreel-poster.svg" alt="Cinematische Showreel-Vorschau" />
+          <div class="hero-glass">
+            <span>Showreel</span>
+            <strong>00:60</strong>
           </div>
         </div>
 
-        <figure class="profile">
-          <img src="assets/profile-card.svg" alt="Abstrakte Portfolio-Grafik" />
-          <figcaption>
-            Verfügbar für Freelance-Projekte, Beratung und Prototyping.
-          </figcaption>
-        </figure>
+        <div class="hero-copy">
+          <p class="eyebrow">Videograf & Storyteller</p>
+          <h1 id="hero-title">Filmische Geschichten für Marken, Menschen und Momente.</h1>
+          <p class="intro">
+            Ich produziere hochwertige Videos mit ruhigem Look, klarer Dramaturgie
+            und einem Gefühl für echte Momente. Von Social Clips bis Imagefilm:
+            präzise geplant, sauber gedreht, stark geschnitten.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="#showreel">Showreel ansehen</a>
+            <a class="button secondary" href="#kontakt">Projekt anfragen</a>
+          </div>
+        </div>
       </section>
 
-      <section class="section" id="projekte">
+      <section class="section showreel-section" id="showreel">
         <div class="section-heading">
-          <p class="eyebrow">Auswahl</p>
-          <h2>Projekte</h2>
+          <p class="eyebrow">Best Work</p>
+          <h2>Die stärkste Arbeit gehört direkt nach oben.</h2>
         </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <span class="project-tag">Web App</span>
-            <h3>Dashboard für lokale Betriebe</h3>
+        <div class="feature-film">
+          <div class="film-stage">
+            <img src="assets/showreel-poster.svg" alt="Showreel Platzhalter" />
+          </div>
+          <div class="film-copy glass-panel">
+            <span class="project-tag">Featured Film</span>
+            <h3>Showreel 2026</h3>
             <p>
-              Ein schlankes Reporting-Tool mit Kennzahlen, Filtern und klarer
-              Darstellung für schnelle Entscheidungen.
+              Platzhalter für dein bestes Video. Sobald du mir die Datei gibst,
+              liegt hier dein echtes Hero-Video mit Poster, Controls und sauberem
+              mobilen Layout.
             </p>
-            <a href="https://github.com/" target="_blank" rel="noreferrer">
-              GitHub ansehen
-            </a>
+            <dl class="meta-list">
+              <div>
+                <dt>Fokus</dt>
+                <dd>Commercial, Event, Social</dd>
+              </div>
+              <div>
+                <dt>Look</dt>
+                <dd>clean, emotional, cinematic</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="arbeiten">
+        <div class="section-heading compact">
+          <p class="eyebrow">Auswahl</p>
+          <h2>Arbeiten mit klarer Bildsprache.</h2>
+        </div>
+        <div class="work-grid">
+          <article class="work-card">
+            <img src="assets/work-brand.svg" alt="Abstraktes Vorschaubild für Brandfilm" />
+            <div>
+              <span class="project-tag">Brand Film</span>
+              <h3>Markenauftritt mit Haltung</h3>
+              <p>
+                Ein Film, der nicht nur zeigt, was ein Unternehmen macht,
+                sondern warum es relevant ist.
+              </p>
+            </div>
           </article>
-          <article class="project-card">
-            <span class="project-tag">Website</span>
-            <h3>Portfolio für Kreative</h3>
-            <p>
-              Eine schnelle OnePage-Seite mit Projektgalerie, Kontaktbereich und
-              sauberer mobiler Darstellung.
-            </p>
-            <a href="https://github.com/" target="_blank" rel="noreferrer">
-              GitHub ansehen
-            </a>
+          <article class="work-card">
+            <img src="assets/work-event.svg" alt="Abstraktes Vorschaubild für Eventfilm" />
+            <div>
+              <span class="project-tag">Event</span>
+              <h3>Momente mit Energie</h3>
+              <p>
+                Dynamische Recaps, die Atmosphäre, Menschen und Highlights in
+                wenigen Sekunden spürbar machen.
+              </p>
+            </div>
           </article>
-          <article class="project-card">
-            <span class="project-tag">Tool</span>
-            <h3>Automatisierter CSV-Importer</h3>
-            <p>
-              Ein kleines Skript, das Daten prüft, normalisiert und für weitere
-              Auswertungen vorbereitet.
-            </p>
-            <a href="https://github.com/" target="_blank" rel="noreferrer">
-              GitHub ansehen
-            </a>
+          <article class="work-card">
+            <img src="assets/work-social.svg" alt="Abstraktes Vorschaubild für Social Content" />
+            <div>
+              <span class="project-tag">Social</span>
+              <h3>Content, der schnell greift</h3>
+              <p>
+                Vertikale Clips, Reels und kurze Kampagnenformate mit starkem
+                Einstieg und sauberem Rhythmus.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section services">
+        <div>
+          <p class="eyebrow">Leistungen</p>
+          <h2>Von Idee bis finalem Schnitt.</h2>
+        </div>
+        <div class="service-list">
+          <article>
+            <span>01</span>
+            <h3>Konzept & Planung</h3>
+            <p>Storyline, Shotlist, Look, Drehplan und eine klare Richtung vor dem ersten Take.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Dreh</h3>
+            <p>Ruhige Kameraarbeit, sauberes Licht, Ton und ein Blick für natürliche Momente.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Schnitt & Color</h3>
+            <p>Editing, Sounddesign, Farblook und Exportformate für Web, Social und Präsentation.</p>
           </article>
         </div>
       </section>
 
       <section class="section split" id="ueber-mich">
         <div>
-          <p class="eyebrow">Profil</p>
-          <h2>Über mich</h2>
+          <p class="eyebrow">Über mich</p>
+          <h2>Visuell ruhig. Inhaltlich auf den Punkt.</h2>
         </div>
-        <div class="about-text">
+        <div class="about-text glass-panel">
           <p>
-            Ich arbeite gern an Projekten, bei denen Technik nicht im Weg steht,
-            sondern Dinge einfacher macht. Mein Schwerpunkt liegt auf Frontend,
-            Struktur, Automatisierung und verständlicher Kommunikation.
+            Ich arbeite nah an Menschen und Marken, ohne Bilder zu überladen.
+            Meine Filme sollen hochwertig wirken, aber nicht künstlich. Das Ziel:
+            ein Look, der Vertrauen schafft und hängen bleibt.
           </p>
-          <ul class="skills" aria-label="Fähigkeiten">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>GitHub Pages</li>
-            <li>Responsive Design</li>
+          <ul class="skills" aria-label="Schwerpunkte">
+            <li>Imagefilm</li>
+            <li>Eventfilm</li>
+            <li>Social Reels</li>
+            <li>Editing</li>
+            <li>Color Grading</li>
           </ul>
         </div>
       </section>
 
       <section class="section contact" id="kontakt">
-        <p class="eyebrow">Kontakt</p>
-        <h2>Lass uns über dein nächstes Projekt sprechen.</h2>
-        <div class="contact-links">
-          <a href="mailto:max@example.com">max@example.com</a>
-          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
-            LinkedIn
-          </a>
+        <div class="contact-inner">
+          <p class="eyebrow">Kontakt</p>
+          <h2>Bereit für ein Video, das sich hochwertig anfühlt?</h2>
+          <p>
+            Schreib mir kurz, worum es geht, wann gedreht werden soll und wo das
+            Video veröffentlicht wird.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:hello@byfotobi.de">hello@byfotobi.de</a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://github.com/ByFotobi/Portfolio" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <span>© <span id="year"></span> Max Mustermann</span>
+      <span>© <span id="year"></span> ByFotobi</span>
       <a href="#start">Nach oben</a>
     </footer>
 

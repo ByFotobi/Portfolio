@@ -1,13 +1,13 @@
-# Portfolio OnePager
+# ByFotobi Portfolio
 
-Ein einfacher statischer Portfolio-OnePager für GitHub Pages.
+Ein statischer Portfolio-OnePager für einen Videografen, optimiert für GitHub Pages.
 
 ## Anpassen
 
 1. Öffne `index.html`.
-2. Ersetze `Max Mustermann`, `max@example.com` und die Projekttexte durch deine Daten.
-3. Passe Links zu GitHub, LinkedIn und Projekten an.
-4. Optional: Ersetze `assets/profile-card.svg` durch ein eigenes Bild.
+2. Ersetze Texte, E-Mail, Instagram-Link und Projektbeschreibungen durch deine Daten.
+3. Ersetze `assets/showreel-poster.svg` durch ein Standbild aus deinem besten Video.
+4. Optional: Ersetze die SVG-Vorschaubilder in `assets/` durch echte Standbilder aus deinen Projekten.
 
 ## Lokal ansehen
 

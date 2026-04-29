@@ -1,0 +1,12 @@
+<svg width="900" height="675" viewBox="0 0 900 675" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Brandfilm Vorschau</title>
+  <rect width="900" height="675" fill="#111217"/>
+  <rect x="72" y="64" width="756" height="547" rx="28" fill="#F5F5F7"/>
+  <rect x="118" y="112" width="312" height="20" rx="10" fill="#111217"/>
+  <rect x="118" y="158" width="210" height="14" rx="7" fill="#6E6E73"/>
+  <rect x="118" y="234" width="664" height="270" rx="22" fill="#D8DEE8"/>
+  <path d="M118 409C254 313 368 337 482 430C587 515 680 514 782 431V504H118V409Z" fill="#8D98A8"/>
+  <path d="M548 260L734 436" stroke="#FFFFFF" stroke-opacity="0.74" stroke-width="64" stroke-linecap="round"/>
+  <circle cx="450" cy="369" r="54" fill="#111217"/>
+  <path d="M438 338L488 369L438 400V338Z" fill="#F5F5F7"/>
+</svg>

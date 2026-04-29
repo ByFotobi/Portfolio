@@ -1,0 +1,15 @@
+<svg width="900" height="675" viewBox="0 0 900 675" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Social Content Vorschau</title>
+  <rect width="900" height="675" fill="#111217"/>
+  <rect x="308" y="54" width="284" height="568" rx="42" fill="#F5F5F7"/>
+  <rect x="328" y="94" width="244" height="488" rx="26" fill="#20242B"/>
+  <path d="M328 430C384 364 432 372 477 442C513 498 544 505 572 465V582H328V430Z" fill="#46505B"/>
+  <path d="M470 128L558 216" stroke="#FFFFFF" stroke-opacity="0.38" stroke-width="46" stroke-linecap="round"/>
+  <circle cx="450" cy="336" r="52" fill="#F5F5F7"/>
+  <path d="M438 307L486 336L438 365V307Z" fill="#111217"/>
+  <rect x="356" y="520" width="88" height="10" rx="5" fill="#F5F5F7" fill-opacity="0.7"/>
+  <rect x="456" y="520" width="86" height="10" rx="5" fill="#1F7A64"/>
+  <rect x="214" y="146" width="68" height="14" rx="7" fill="#F5F5F7" fill-opacity="0.36"/>
+  <rect x="618" y="250" width="92" height="14" rx="7" fill="#F5F5F7" fill-opacity="0.28"/>
+  <rect x="166" y="482" width="114" height="14" rx="7" fill="#0071E3" fill-opacity="0.72"/>
+</svg>
