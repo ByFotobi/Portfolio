@@ -151,7 +151,7 @@ img {
   display: grid;
   min-height: auto;
   gap: clamp(28px, 5vw, 56px);
-  padding: clamp(70px, 10vw, 132px) clamp(18px, 4vw, 48px)
+  padding: clamp(54px, 8vw, 104px) clamp(18px, 4vw, 48px)
     clamp(46px, 7vw, 92px);
   text-align: center;
 }
@@ -326,6 +326,10 @@ h3 {
   margin-bottom: 24px;
 }
 
+.showreel-section {
+  padding-top: clamp(70px, 10vw, 126px);
+}
+
 .signature-section {
   padding-top: clamp(36px, 6vw, 86px);
 }
@@ -411,12 +415,18 @@ h3 {
   box-shadow: var(--shadow);
 }
 
-.film-stage img {
+.film-stage img,
+.film-stage video {
   display: block;
   width: 100%;
   height: 100%;
   min-height: 430px;
   object-fit: cover;
+}
+
+.film-stage video {
+  height: 118%;
+  transform: translateY(-8%);
 }
 
 .film-copy,
@@ -649,7 +659,8 @@ h3 {
   }
 
   .film-stage,
-  .film-stage img {
+  .film-stage img,
+  .film-stage video {
     min-height: 340px;
   }
 }
@@ -679,12 +690,7 @@ h3 {
 
   .hero {
     gap: 28px;
-    padding: 58px 14px 56px;
-  }
-
-  .hero-media {
-    aspect-ratio: 4 / 5;
-    border-radius: 24px;
+    padding: 48px 14px 56px;
   }
 
   h1 {
