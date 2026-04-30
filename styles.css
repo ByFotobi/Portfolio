@@ -447,8 +447,8 @@ a:focus-visible {
   transition: transform 500ms ease;
 }
 
-.signature-media .portrait-photo {
-  object-position: center 18%;
+.signature-media .bts-photo {
+  object-position: center 20%;
 }
 
 .signature-card-large .signature-media img {
@@ -640,17 +640,51 @@ a:focus-visible {
 
 .work-media {
   position: relative;
-  display: block;
+  display: grid;
+  min-height: clamp(390px, 44vw, 520px);
+  place-items: center;
   overflow: hidden;
-  background: var(--ink);
+  padding: clamp(20px, 3vw, 30px);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.16), transparent 35%),
+    linear-gradient(150deg, #08090c 0%, #191b20 58%, #050507 100%);
+}
+
+.work-media::before {
+  position: absolute;
+  top: clamp(16px, 2.6vw, 24px);
+  left: 50%;
+  z-index: 2;
+  width: 56px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(245, 245, 247, 0.72);
+  content: "";
+  transform: translateX(-50%);
+}
+
+.work-media::after {
+  position: absolute;
+  inset: clamp(12px, 2vw, 18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 34px;
+  content: "";
+  pointer-events: none;
 }
 
 .work-card img {
   display: block;
-  width: 100%;
-  aspect-ratio: 4 / 3;
+  width: min(78%, 246px);
+  aspect-ratio: 9 / 16;
+  border: clamp(7px, 1vw, 10px) solid #f5f5f7;
+  border-radius: 30px;
   object-fit: cover;
-  transition: transform 500ms var(--ease-out);
+  box-shadow:
+    0 28px 58px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+  transition:
+    box-shadow 500ms var(--ease-out),
+    transform 500ms var(--ease-out);
 }
 
 .work-card:hover {
@@ -660,7 +694,24 @@ a:focus-visible {
 }
 
 .work-card:hover img {
-  transform: scale(1.035);
+  box-shadow:
+    0 34px 68px rgba(0, 0, 0, 0.42),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.78);
+  transform: translateY(-4px) scale(1.025);
+}
+
+.work-card .play-badge {
+  top: 50%;
+  right: auto;
+  left: 50%;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.84);
+  transform: translate(-50%, -50%);
+}
+
+.work-card:hover .play-badge {
+  background: rgba(255, 255, 255, 0.94);
+  transform: translate(-50%, -56%);
 }
 
 .work-card div {
