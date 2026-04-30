@@ -432,6 +432,7 @@ a:focus-visible {
 }
 
 .signature-media {
+  position: relative;
   display: block;
   overflow: hidden;
   background: var(--ink);
@@ -452,6 +453,32 @@ a:focus-visible {
 
 .signature-card:hover .signature-media img {
   transform: scale(1.035);
+}
+
+.play-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.64);
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 800;
+  backdrop-filter: blur(18px) saturate(160%);
+  transition:
+    background 220ms ease,
+    transform 260ms var(--ease-out);
+}
+
+.signature-card:hover .play-badge {
+  background: rgba(255, 255, 255, 0.82);
+  transform: translateY(-1px);
 }
 
 .signature-card:hover {
