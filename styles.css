@@ -447,6 +447,10 @@ a:focus-visible {
   transition: transform 500ms ease;
 }
 
+.signature-media .portrait-photo {
+  object-position: center 18%;
+}
+
 .signature-card-large .signature-media img {
   aspect-ratio: 4 / 3;
 }
@@ -632,6 +636,13 @@ a:focus-visible {
     border-color 280ms ease,
     box-shadow 340ms ease,
     transform 340ms var(--ease-out);
+}
+
+.work-media {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: var(--ink);
 }
 
 .work-card img {
