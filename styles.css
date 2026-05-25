@@ -647,7 +647,7 @@ a:focus-visible {
 }
 
 .reel-section {
-  overflow: hidden;
+  overflow: visible;
   padding-right: 0;
   padding-left: 0;
 }
@@ -667,7 +667,7 @@ a:focus-visible {
   grid-auto-flow: column;
   gap: clamp(18px, 3vw, 28px);
   width: 100%;
-  padding: 0 max(18px, calc((100vw - 1120px) / 2)) 10px;
+  padding: 18px max(24px, calc((100vw - 1120px) / 2)) 34px;
   margin: 0;
   overflow-x: auto;
   overscroll-behavior-x: contain;
@@ -688,10 +688,10 @@ a:focus-visible {
 .work-media {
   position: relative;
   display: grid;
-  min-height: 470px;
+  min-height: 486px;
   place-items: start center;
   overflow: visible;
-  padding: 0 30px;
+  padding: 10px 34px 4px;
   background: transparent;
   box-shadow: none;
   text-decoration: none;
@@ -724,6 +724,7 @@ a:focus-visible {
   transition:
     box-shadow 500ms var(--ease-out),
     transform 500ms var(--ease-out);
+  transform-origin: center center;
 }
 
 .phone-mockup::before {
@@ -776,7 +777,7 @@ a:focus-visible {
     0 32px 72px rgba(0, 0, 0, 0.19),
     0 0 0 1px rgba(0, 0, 0, 0.22),
     inset 0 0 0 1px rgba(255, 255, 255, 0.9);
-  transform: translateY(-4px) scale(1.018);
+  transform: translateY(-2px) scale(1.018);
 }
 
 .work-card:hover .phone-screen img {
@@ -1091,8 +1092,8 @@ a:focus-visible {
   }
 
   .work-media {
-    min-height: 430px;
-    padding-top: 0;
+    min-height: 446px;
+    padding-top: 10px;
   }
 
   .work-card div {
