@@ -13,6 +13,7 @@
   --glass-border: rgba(255, 255, 255, 0.66);
   --glass-shadow: 0 14px 44px rgba(0, 0, 0, 0.07);
   --radius: 8px;
+  --card-shadow: 0 20px 64px rgba(0, 0, 0, 0.075);
   --shadow: 0 28px 80px rgba(0, 0, 0, 0.14);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -64,6 +65,7 @@ img {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   background: rgba(245, 245, 247, 0.82);
   backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
 }
 
 .header-inner {
@@ -196,8 +198,8 @@ img {
   display: grid;
   min-height: auto;
   gap: clamp(28px, 5vw, 56px);
-  padding: clamp(54px, 8vw, 104px) clamp(18px, 4vw, 48px)
-    clamp(46px, 7vw, 92px);
+  padding: clamp(58px, 8vw, 112px) clamp(18px, 4vw, 48px)
+    clamp(52px, 7vw, 98px);
   text-align: center;
 }
 
@@ -246,6 +248,7 @@ img {
   background: rgba(255, 255, 255, 0.64);
   box-shadow: var(--glass-shadow);
   backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
 }
 
 .hero-glass {
@@ -365,6 +368,7 @@ h3 {
   color: var(--ink);
   box-shadow: 0 10px 32px rgba(0, 0, 0, 0.06);
   backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
 }
 
 .button:hover {
@@ -429,7 +433,7 @@ a:focus-visible {
   border: 1px solid var(--line);
   border-radius: 28px;
   background: var(--panel-strong);
-  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.07);
+  box-shadow: var(--card-shadow);
   transition:
     border-color 280ms ease,
     box-shadow 340ms ease,
@@ -510,15 +514,29 @@ a:focus-visible {
 }
 
 .signature-copy a {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 5px;
   color: var(--blue);
   font-weight: 760;
   text-decoration: none;
   transition: opacity 220ms ease;
 }
 
+.signature-copy a::after {
+  content: "›";
+  transform: translateY(-1px);
+  transition: transform 220ms var(--ease-out);
+}
+
 .signature-copy a:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+
+.signature-copy a:hover::after {
+  transform: translate(3px, -1px);
 }
 
 .feature-film {
@@ -600,6 +618,7 @@ a:focus-visible {
   color: #0756a8;
   font-size: 0.76rem;
   font-weight: 800;
+  line-height: 1;
 }
 
 .meta-list {
@@ -646,7 +665,7 @@ a:focus-visible {
   display: grid;
   grid-auto-columns: minmax(310px, 360px);
   grid-auto-flow: column;
-  gap: 22px;
+  gap: clamp(18px, 3vw, 28px);
   width: 100%;
   padding: 0 max(18px, calc((100vw - 1120px) / 2)) 10px;
   margin: 0;
@@ -873,13 +892,26 @@ a:focus-visible {
 }
 
 .contact-inner {
+  position: relative;
+  overflow: hidden;
   width: min(1120px, 100%);
   padding: clamp(32px, 7vw, 76px);
   margin: 0 auto;
   border-radius: 34px;
-  background: var(--ink);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(0, 113, 227, 0.2), transparent 34%),
+    linear-gradient(145deg, #111318 0%, #050608 100%);
   color: #fff;
   box-shadow: var(--shadow);
+}
+
+.contact-inner::before {
+  position: absolute;
+  inset: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: inherit;
+  content: "";
+  pointer-events: none;
 }
 
 .contact h2 {
@@ -968,6 +1000,10 @@ a:focus-visible {
   .film-stage video {
     min-height: 340px;
   }
+
+  .split {
+    align-items: start;
+  }
 }
 
 @media (max-width: 640px) {
@@ -995,7 +1031,7 @@ a:focus-visible {
 
   .hero {
     gap: 28px;
-    padding: 48px 14px 56px;
+    padding: 46px 14px 54px;
   }
 
   h1 {
@@ -1040,8 +1076,7 @@ a:focus-visible {
   }
 
   .section {
-    padding-right: 18px;
-    padding-left: 18px;
+    padding: 58px 18px;
   }
 
   .reel-section {
@@ -1056,8 +1091,12 @@ a:focus-visible {
   }
 
   .work-media {
-    min-height: 452px;
+    min-height: 430px;
     padding-top: 0;
+  }
+
+  .work-card div {
+    padding-top: 22px;
   }
 }
 
@@ -1119,6 +1158,14 @@ a:focus-visible {
   .about-text {
     padding: 22px;
     border-radius: 22px;
+  }
+
+  .work-grid {
+    grid-auto-columns: minmax(260px, 84vw);
+  }
+
+  .phone-mockup {
+    width: min(76%, 220px);
   }
 
   .meta-list div {
