@@ -1,6 +1,6 @@
-# ByFotobi Portfolio
+# ByTobi Portfolio
 
-Ein statischer Portfolio-OnePager für einen Videografen, optimiert für GitHub Pages.
+Ein statischer Portfolio-OnePager für ByTobi: ruhige 16:9-Filme, dokumentarische Unternehmensgeschichten und Social Clips aus derselben Produktion.
 
 ## Anpassen
 
